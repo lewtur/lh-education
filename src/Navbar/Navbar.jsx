@@ -9,6 +9,7 @@ const NavBarStyles = styled.div`
     color: ${props => props.theme.primary};
     display: flex;
     flex-direction: column;
+    padding-bottom: 1rem;
 
     @media ${props => props.theme.breakpoints.md} {
         flex-direction: row;
@@ -42,9 +43,9 @@ const LogoContainer = styled.div`
 const BurgerMenuButton = styled.div`
     display: flex;
     align-self: center;
+    justify-content: center;
     height: 2rem;
     width: 2rem;
-    /* background-color: red; */
 
     @media ${props => props.theme.breakpoints.md} {
         display: none;

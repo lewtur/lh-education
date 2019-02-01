@@ -13,9 +13,9 @@ const MenuItemStyles = styled.li`
     }
 `;
 
-const MenuItem = ({ text }) => {
+const MenuItem = ({ text, wowDelay }) => {
     return ( 
-        <MenuItemStyles>{text}</MenuItemStyles>
+        <MenuItemStyles className="wow fadeIn" data-wow-delay={`${wowDelay}ms`}>{text}</MenuItemStyles>
      );
 }
  

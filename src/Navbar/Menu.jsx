@@ -39,7 +39,7 @@ class Menu extends Component {
         return (
             <MenuStyles>
                 <MenuListHolder menuIsOpen={menuIsOpen}>
-                    {menuItems.map(menuItem => <MenuItem text={menuItem} />)}
+                    {menuItems.map((menuItem, index) => <MenuItem text={menuItem} wowDelay={(index + 1) * 100} />)}
                 </MenuListHolder>
             </MenuStyles>
         );
