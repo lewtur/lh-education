@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 import MenuItem from './MenuItem';
 
 const MenuStyles = styled.div`
-    
+    align-self: center;
 `;
 
 const MenuListHolder = styled.ul`

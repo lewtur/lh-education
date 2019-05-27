@@ -1,8 +1,8 @@
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faTimes, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 const loadFontAwesomeLibrary = () => {
-    library.add(faBars, faTimes);
+    library.add(faBars, faTimes, faChevronLeft, faChevronRight);
 };
 
 
