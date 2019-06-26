@@ -7,7 +7,7 @@ const ContactStyles = styled.section`
 
 const Contact = () => {
     return ( 
-        <ContactStyles>
+        <ContactStyles id="contact">
             <h1>Contact</h1>
         </ContactStyles>
      );

@@ -12,7 +12,7 @@ const ServicesStyles = styled.section`
 
 const Services = () => {
   return ( 
-    <ServicesStyles>
+    <ServicesStyles id="services">
       <h1>Services</h1>
       <ServiceSection header={'SAT and ACT preparation'}>
         <p>

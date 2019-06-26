@@ -55,7 +55,7 @@ const Testimonials = () => {
     }
 
     return ( 
-        <TestimonialsStyles>
+        <TestimonialsStyles id="testimonials">
             <h1>Our clients</h1>
             <TestimonialLeftArrow onClick={() => changeIndex(-1)}><FontAwesomeIcon icon='chevron-left' size="3x" /></TestimonialLeftArrow>
             <Testimonial {...items.testimonials[index]} />

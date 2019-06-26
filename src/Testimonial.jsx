@@ -1,12 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const TestimonialStyle = styled.div`
     transition: all 0.5s ease;
-`;
-
-const Name = styled.div`
-    font-size: 1.5rem;
 `;
 
 const Title = styled.div`
@@ -84,7 +80,7 @@ const FullText = styled.div`
     }
 `;
 
-const Testimonial = ({ name, title, workplace, headline, fullText }) => {
+const Testimonial = ({ title, workplace, headline, fullText }) => {
     const [expand, setExpand] = useState(false);
 
     console.log(workplace)
@@ -94,7 +90,6 @@ const Testimonial = ({ name, title, workplace, headline, fullText }) => {
             <Headline>"{headline}"</Headline>
             <DetailsContainer>
                 <div className="left">
-                    <Name>{name}</Name>
                     <Title>{title}</Title>
                     <Workplace>{workplace}</Workplace>
                 </div>

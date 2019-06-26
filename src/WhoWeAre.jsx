@@ -8,7 +8,7 @@ const WhoWeAreStyles = styled.section`
 
 const WhoWeAre = () => {
   return ( 
-    <WhoWeAreStyles>
+    <WhoWeAreStyles id="who-we-are">
       <h1>Who we are</h1>
       <p>
         LH Educational Services Ltd are a team of expert educators. Years of teaching experience, 

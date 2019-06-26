@@ -80,7 +80,7 @@ class NavBar extends Component {
                     <div className="logo-strap">LH Educational Services Ltd</div>
 
                 </LogoContainer>
-                <Menu menuItems={['About Us', 'What We Do', 'Projects', 'Testimonials', 'Contact']} menuIsOpen={menuIsOpen} />
+                <Menu menuItems={['Who We Are', 'What We Do', 'Services', 'Testimonials', 'Contact']} menuIsOpen={menuIsOpen} />
             </NavBarStyles>
         );
     }

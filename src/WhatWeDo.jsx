@@ -8,7 +8,7 @@ const WhatWeDoStyles = styled.section`
 
 const WhatWeDo = () => {
     return ( 
-        <WhatWeDoStyles>
+        <WhatWeDoStyles id="what-we-do">
             <h1>What we do</h1>
             <p>
                 Quality teaching is at the heart of everything we do. Our aim is to ensure that students are

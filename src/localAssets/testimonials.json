@@ -1,7 +1,6 @@
 {
     "testimonials": [
         {
-            "name": "Lee Wood",
             "title": "Academy Head of Education",
             "workplace": "Bolton Wanderers Football Club", 
             "headline": "Lauren and the team of Tutors at LH Educational Services are nothing short of consummate professionals in everything they do.",
@@ -12,7 +11,6 @@
             ]
         },
         {
-            "name": "David Hayhurst",
             "title": "Principal",
             "workplace": "Blackburn Rovers Sports College",
             "headline": "We have seen a vast improvement in student attainment and our GCSE success rates have increased by 12% when compared to the previous academic year.",
@@ -21,7 +19,6 @@
             ]
         },
         {
-            "name": "",
             "title": "Head of Education",
             "workplace": "Burnley Football Club",
             "headline": "The biggest strength of LHES is the consistency in producing outstanding practitioners. I would have no hesitation in recommending their services to other companies.",
