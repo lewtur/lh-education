@@ -83,8 +83,6 @@ const FullText = styled.div`
 const Testimonial = ({ title, workplace, headline, fullText }) => {
     const [expand, setExpand] = useState(false);
 
-    console.log(workplace)
-
     return (
         <TestimonialStyle>
             <Headline>"{headline}"</Headline>
@@ -98,7 +96,7 @@ const Testimonial = ({ title, workplace, headline, fullText }) => {
                 </div>
             </DetailsContainer>
             <FullText className={expand ? 'show' : ''}>
-                {fullText.map(paragraph => <p>{paragraph}</p>)}
+                {fullText.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
             </FullText>
         </TestimonialStyle>
     );
