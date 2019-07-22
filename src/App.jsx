@@ -11,6 +11,7 @@ import Contact from './Contact';
 import Header from './Header';
 import WhoWeAre from './WhoWeAre';
 import SafeguardingPolicy from './SafeguardingPolicy';
+import Footer from './Footer';
 
 const SectionStyles = styled.div`
   section {
@@ -50,6 +51,7 @@ class App extends Component {
           <Testimonials />
           <SafeguardingPolicy />
           <Contact />
+          <Footer />
         </SectionStyles>
       </ThemeProvider>
     );
