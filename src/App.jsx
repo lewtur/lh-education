@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import theme from './theme';
 import Navbar from './Navbar/Navbar';
 import WOW from 'wowjs';
@@ -11,6 +12,7 @@ import Contact from './Contact';
 import Header from './Header';
 import WhoWeAre from './WhoWeAre';
 import SafeguardingPolicy from './SafeguardingPolicy';
+import SafeguardingPage from './Pages/SafeguardingPage';
 import Footer from './Footer';
 
 const SectionStyles = styled.div`
@@ -31,6 +33,23 @@ const SectionStyles = styled.div`
   }
 `;
 
+const MainContent = () => {
+  return (
+    <>
+
+      <Intro />
+      <Header />
+      <WhoWeAre />
+      <WhatWeDo />
+      <Projects />
+      <Testimonials />
+      <SafeguardingPolicy />
+      <Contact />
+      <Footer />
+    </>
+  )
+}
+
 class App extends Component {
   componentDidMount() {
     new WOW.WOW({
@@ -42,16 +61,14 @@ class App extends Component {
     return (
       <ThemeProvider theme={theme}>
         <SectionStyles>
-          <Navbar />
-          <Intro />
-          <Header />
-          <WhoWeAre />
-          <WhatWeDo />
-          <Projects />
-          <Testimonials />
-          <SafeguardingPolicy />
-          <Contact />
-          <Footer />
+          <Router>
+            <Navbar />
+            <Switch>
+              <Route exact path="/" component={MainContent} />
+              <Route path="/safeguarding-policy" component={SafeguardingPage} />
+              <Route component={() => <section>Page not found</section>} />
+            </Switch>
+          </Router>
         </SectionStyles>
       </ThemeProvider>
     );

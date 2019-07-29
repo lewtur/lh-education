@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const FooterStyles = styled.div`
   background-color: #333;
-  margin-top: 8rem;
+  margin-top: 6rem;
 `;
 
 const Copyright = styled.div`

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Menu from './Menu';
 
@@ -38,6 +39,10 @@ const LogoContainer = styled.div`
         display: flex;
         justify-content: space-between;
     }
+
+    a {
+      text-decoration: none;
+    }
 `;
 
 const BurgerMenuButton = styled.div`
@@ -54,35 +59,36 @@ const BurgerMenuButton = styled.div`
 
 class NavBar extends Component {
 
-    constructor(props) {
-        super(props);
+  constructor(props) {
+    super(props);
 
-        this.state = {
-            menuIsOpen: false
-        }
-
-        this.toggleMenu = () => this.setState(prevState => ({ menuIsOpen: !prevState.menuIsOpen }));
+    this.state = {
+      menuIsOpen: false
     }
 
-    render() {
-        const { menuIsOpen } = this.state;
-        const icon = menuIsOpen ? 'times' : 'bars'
+    this.toggleMenu = () => this.setState(prevState => ({ menuIsOpen: !prevState.menuIsOpen }));
+  }
 
-        return (
-            <NavBarStyles>
-                <LogoContainer>
-                    <div className="top-line">
-                        <div className="logo-main">LHES</div>
-                        <BurgerMenuButton onClick={this.toggleMenu}>
-                            <FontAwesomeIcon icon={icon} size="3x" />
-                        </BurgerMenuButton>
-                    </div>
-                    <div className="logo-strap">LH Educational Services Ltd</div>
+  render() {
+    const { menuIsOpen } = this.state;
+    const icon = menuIsOpen ? 'times' : 'bars'
 
-                </LogoContainer>
-                <Menu menuItems={['Who We Are', 'What We Do', 'Services', 'Testimonials', 'Contact']} menuIsOpen={menuIsOpen} />
-            </NavBarStyles>
-        );
-    }
+    return (
+      <NavBarStyles>
+        <LogoContainer>
+          <Link to="/">
+            <div className="top-line">
+              <div className="logo-main">LHES</div>
+              <BurgerMenuButton onClick={this.toggleMenu}>
+                <FontAwesomeIcon icon={icon} size="3x" />
+              </BurgerMenuButton>
+            </div>
+            <div className="logo-strap">LH Educational Services Ltd</div>
+          </Link>
+        </LogoContainer>
+        <Menu menuItems={['Who We Are', 'What We Do', 'Services', 'Testimonials', 'Contact']} menuIsOpen={menuIsOpen} />
+      </NavBarStyles>
+    );
+  }
 }
 export default NavBar;
